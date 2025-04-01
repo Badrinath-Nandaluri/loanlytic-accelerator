@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -10,7 +9,7 @@ import {
   Check, 
   X, 
   Clock, 
-  FileBar
+  FilesIcon
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,7 +18,6 @@ import { Input } from '@/components/ui/input';
 import { Progress } from '@/components/ui/progress';
 
 const LoanManagement = () => {
-  // Mock data
   const loans = [
     {
       id: "L-2023-001",
@@ -244,7 +242,7 @@ const LoanManagement = () => {
           {loans.filter(loan => loan.status === "pending").length === 0 ? (
             <Card>
               <CardContent className="flex flex-col items-center justify-center py-12">
-                <FileBar className="text-gray-400 h-12 w-12 mb-4" />
+                <FilesIcon className="text-gray-400 h-12 w-12 mb-4" />
                 <h3 className="text-lg font-medium">No pending applications</h3>
                 <p className="text-gray-500 text-center mt-1 mb-4">
                   You don't have any pending loan applications at the moment
